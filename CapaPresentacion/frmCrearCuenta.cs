@@ -20,6 +20,13 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        public bool mtdVerficarCamposVacios()
+        {
+            
+            
+            return true;
+        }
+
         private void btnCrear_Click(object sender, EventArgs e)
         {
             //INFORMACION DE LA CUENTA
