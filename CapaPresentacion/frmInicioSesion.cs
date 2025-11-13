@@ -62,8 +62,8 @@ namespace CapaPresentacion
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            frmCrearCuenta CrearCuenta = new frmCrearCuenta();
-            CrearCuenta.ShowDialog();
+        //    frmCrearCuenta CrearCuenta = new frmCrearCuenta();
+         //   CrearCuenta.ShowDialog();
         }
 
         private void frmInicioSesion_Load(object sender, EventArgs e)
@@ -74,6 +74,12 @@ namespace CapaPresentacion
         private void ptbCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCrearCuenta CrearCuenta = new frmCrearCuenta();
+            CrearCuenta.ShowDialog();
         }
     }
 }

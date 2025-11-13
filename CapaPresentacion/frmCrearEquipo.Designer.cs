@@ -32,15 +32,17 @@
             this.lblNombreEquipo = new System.Windows.Forms.Label();
             this.txtNombreEquipo = new System.Windows.Forms.TextBox();
             this.dpbDatosEquipo = new System.Windows.Forms.GroupBox();
-            this.btnSubirFoto = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblLogo = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblCreador = new System.Windows.Forms.Label();
             this.txtCreador = new System.Windows.Forms.TextBox();
             this.btnCrearEquipo = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.btnSubirFoto = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dpbDatosEquipo.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,9 +73,7 @@
             // 
             // dpbDatosEquipo
             // 
-            this.dpbDatosEquipo.Controls.Add(this.btnSubirFoto);
-            this.dpbDatosEquipo.Controls.Add(this.pictureBox1);
-            this.dpbDatosEquipo.Controls.Add(this.lblLogo);
+            this.dpbDatosEquipo.Controls.Add(this.btnCrearEquipo);
             this.dpbDatosEquipo.Controls.Add(this.lblDescripcion);
             this.dpbDatosEquipo.Controls.Add(this.txtDescripcion);
             this.dpbDatosEquipo.Controls.Add(this.lblCreador);
@@ -82,36 +82,10 @@
             this.dpbDatosEquipo.Controls.Add(this.txtNombreEquipo);
             this.dpbDatosEquipo.Location = new System.Drawing.Point(33, 67);
             this.dpbDatosEquipo.Name = "dpbDatosEquipo";
-            this.dpbDatosEquipo.Size = new System.Drawing.Size(407, 512);
+            this.dpbDatosEquipo.Size = new System.Drawing.Size(407, 288);
             this.dpbDatosEquipo.TabIndex = 63;
             this.dpbDatosEquipo.TabStop = false;
             this.dpbDatosEquipo.Text = "Datos del Equipo";
-            // 
-            // btnSubirFoto
-            // 
-            this.btnSubirFoto.Location = new System.Drawing.Point(243, 330);
-            this.btnSubirFoto.Name = "btnSubirFoto";
-            this.btnSubirFoto.Size = new System.Drawing.Size(75, 23);
-            this.btnSubirFoto.TabIndex = 71;
-            this.btnSubirFoto.Text = "Subir Foto";
-            this.btnSubirFoto.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(19, 330);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 59);
-            this.pictureBox1.TabIndex = 70;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblLogo
-            // 
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Location = new System.Drawing.Point(16, 314);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(31, 13);
-            this.lblLogo.TabIndex = 69;
-            this.lblLogo.Text = "Logo";
             // 
             // lblDescripcion
             // 
@@ -149,7 +123,7 @@
             // 
             // btnCrearEquipo
             // 
-            this.btnCrearEquipo.Location = new System.Drawing.Point(365, 585);
+            this.btnCrearEquipo.Location = new System.Drawing.Point(19, 242);
             this.btnCrearEquipo.Name = "btnCrearEquipo";
             this.btnCrearEquipo.Size = new System.Drawing.Size(75, 23);
             this.btnCrearEquipo.TabIndex = 64;
@@ -157,12 +131,50 @@
             this.btnCrearEquipo.UseVisualStyleBackColor = true;
             this.btnCrearEquipo.Click += new System.EventHandler(this.btnCrearEquipo_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblLogo);
+            this.groupBox1.Controls.Add(this.btnSubirFoto);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Location = new System.Drawing.Point(470, 67);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(239, 288);
+            this.groupBox1.TabIndex = 72;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // lblLogo
+            // 
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Location = new System.Drawing.Point(83, 71);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(31, 13);
+            this.lblLogo.TabIndex = 72;
+            this.lblLogo.Text = "Logo";
+            // 
+            // btnSubirFoto
+            // 
+            this.btnSubirFoto.Location = new System.Drawing.Point(53, 212);
+            this.btnSubirFoto.Name = "btnSubirFoto";
+            this.btnSubirFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnSubirFoto.TabIndex = 74;
+            this.btnSubirFoto.Text = "Subir Foto";
+            this.btnSubirFoto.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(64, 118);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 59);
+            this.pictureBox1.TabIndex = 73;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmCrearEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 643);
-            this.Controls.Add(this.btnCrearEquipo);
+            this.ClientSize = new System.Drawing.Size(880, 756);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dpbDatosEquipo);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmCrearEquipo";
@@ -170,6 +182,8 @@
             this.Load += new System.EventHandler(this.frmCrearEquipo_Load);
             this.dpbDatosEquipo.ResumeLayout(false);
             this.dpbDatosEquipo.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -186,9 +200,10 @@
         private System.Windows.Forms.TextBox txtCreador;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Button btnCrearEquipo;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Button btnSubirFoto;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.Button btnCrearEquipo;
     }
 }
