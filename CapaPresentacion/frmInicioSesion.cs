@@ -34,10 +34,20 @@ namespace CapaPresentacion
             try
             {
                 bool ValidarCredencial = ObjCredenciales.mtdCValidarCredencialesCN(correo, clave);
+                var GuardarUsuario = ObjCredenciales.mtdObtenerUsuarioCN(correo, clave);
 
                 if (ValidarCredencial)
                 {
                     MessageBox.Show("Credenciales Correctas", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    //GUADAR EL USUARIO EN UNA CLASE GLOBAL STATIC
+                    clsSesionUsuario_CN.idUsuario = GuardarUsuario.idUsuario;
+                    clsSesionUsuario_CN.NombreUsuario = GuardarUsuario.nombreUsuario;
+
+                    //LINEA USADA PARA PRUEBAS (BORRAR AL FINALIZAR)
+                    frmCrearEquipo crearEquipo = new frmCrearEquipo();
+                    crearEquipo.ShowDialog();
+
                 }
                 else
                 {

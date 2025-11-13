@@ -52,19 +52,37 @@
     <Compile Include="frmCrearCuenta.Designer.cs">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearEquipo.Designer.cs">
+      <DependentUpon>frmCrearEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPaginaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaginaPrincipal.Designer.cs">
+      <DependentUpon>frmPaginaPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCrearCuenta.resx">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearEquipo.resx">
+      <DependentUpon>frmCrearEquipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaginaPrincipal.resx">
+      <DependentUpon>frmPaginaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

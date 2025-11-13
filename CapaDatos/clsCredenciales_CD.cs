@@ -16,7 +16,8 @@ namespace CapaDatos
             {
                 connection.Open();
 
-                string query = "SELECT * FROM tbUsuario WHERE NombreUsuario = @NombreUsuario AND Clave = @Clave";
+                string query = @"SELECT * FROM tbUsuario 
+                                 WHERE NombreUsuario = @NombreUsuario AND Clave = @Clave";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -25,8 +26,45 @@ namespace CapaDatos
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        //SI EXISTE UNA FILA RETORNARA TRUE
-                        return reader.HasRows;
+                        if (reader.Read())
+                        {
+                            //SI EXISTE UNA FILA RETORNARA TRUE
+                            return reader.HasRows;
+                        }
+                        else { return false; }
+                        
+                    }
+                }
+            }
+        }
+
+        public (int idUsuario, string nombreUsuario) mtdObtenerUsuarioCD(string NombreUsuario, string Clave)
+        {
+            using (SqlConnection connection = clsConexion_CD.mtdObtenerConexion())
+            {
+                connection.Open();
+
+                string query = @"SELECT IdUsuario, NombreUsuario 
+                                 FROM tbUsuario 
+                                 WHERE NombreUsuario = @NombreUsuario AND Clave = @Clave";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NombreUsuario", NombreUsuario);
+                    command.Parameters.AddWithValue("@Clave", Clave);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int idUsuario = reader.GetInt32(reader.GetOrdinal("IdUsuario"));
+                            string nombreUsuario = reader.GetString(reader.GetOrdinal("NombreUsuario"));
+                            return (idUsuario, nombreUsuario);
+                        }
+                        else
+                        {
+                            return (0, null);
+                        }
                     }
                 }
             }
