@@ -70,5 +70,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void ptbCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
