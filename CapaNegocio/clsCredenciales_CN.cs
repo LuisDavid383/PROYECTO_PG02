@@ -14,15 +14,6 @@ namespace CapaNegocio
 
         public bool mtdCValidarCredencialesCN(string Correo, string Clave)
         {
-            string PatronCorreo = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            bool ValidarCorreo = Regex.IsMatch(Correo, PatronCorreo);
-
-            if (!ValidarCorreo)
-            {
-                //DETIENE EL METODO Y LANZA EXCEPCION
-                throw new FormatException("El formato del correo no es válido.");
-            }
-
             return ObjCredenciales.mtdCValidarCredencialesCD(Correo,Clave);
         }
     }

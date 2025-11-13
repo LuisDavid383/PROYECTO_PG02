@@ -1,6 +1,7 @@
 ﻿using CapaDatos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,37 @@ namespace CapaNegocio
     {
         private clsCrearCuenta_CD ObjCrearCuenta = new clsCrearCuenta_CD();
 
-        public void mtdCrearCuentaCN(string NombreUsuario, string Correo, string Clave,
-                                   string Nombres, string ApellidoPaterno, string ApellidoMaterno, DateTime FechaNacimiento, string Telefono)
+        public void mtdCrearCuentaCN(string Nombres,
+                                     string ApellidoPaterno,
+                                     string ApellidoMaterno,
+                                     int IDTipoDocumento,
+                                     string Documento,
+                                     DateTime FechaNacimiento,
+                                     string Telefono,
+                                     string Correo,
+                                     string Genero,
+                                     //DATOS DEL USUARIO
+                                     string NombreUsuario,
+                                     string Clave)
         {
-            ObjCrearCuenta.mtdCrearCuentaCD(NombreUsuario, Correo, Clave, Nombres, ApellidoPaterno, ApellidoMaterno, FechaNacimiento, Telefono);
+            ObjCrearCuenta.mtdCrearCuentaCD(Nombres,
+                                            ApellidoPaterno,
+                                            ApellidoMaterno,
+                                            IDTipoDocumento,
+                                            Documento,
+                                            FechaNacimiento,
+                                            Telefono,
+                                            Correo,
+                                            Genero,
+                                            NombreUsuario,
+                                            Clave);
+        }
+
+        public DataTable mtdListarTipoDocumentoActivosCD()
+        {
+            DataTable tbTipoDocumento = new DataTable();
+            tbTipoDocumento = ObjCrearCuenta.mtdListarTipoDocumentoActivosCD();
+            return tbTipoDocumento;
         }
     }
 }

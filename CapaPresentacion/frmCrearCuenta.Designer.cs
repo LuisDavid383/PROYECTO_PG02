@@ -30,24 +30,29 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gpbInfoCuenta = new System.Windows.Forms.GroupBox();
             this.txtNomUsuario = new System.Windows.Forms.TextBox();
             this.lblNomUsuario = new System.Windows.Forms.Label();
             this.gpbInfoPersonal = new System.Windows.Forms.GroupBox();
-            this.txtNombres = new System.Windows.Forms.TextBox();
-            this.lblNombres = new System.Windows.Forms.Label();
-            this.txtPaterno = new System.Windows.Forms.TextBox();
-            this.lblPaterno = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
+            this.lblTipoDocumento = new System.Windows.Forms.Label();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.lblCelular = new System.Windows.Forms.Label();
+            this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.txtMaterno = new System.Windows.Forms.TextBox();
             this.lblMaterno = new System.Windows.Forms.Label();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.dtpNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.lblCelular = new System.Windows.Forms.Label();
-            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.txtPaterno = new System.Windows.Forms.TextBox();
+            this.lblPaterno = new System.Windows.Forms.Label();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.lblNombres = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.gpbInfoCuenta.SuspendLayout();
             this.gpbInfoPersonal.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 100);
+            this.label1.Location = new System.Drawing.Point(28, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 9;
@@ -63,32 +68,16 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(134, 94);
+            this.txtContraseña.Location = new System.Drawing.Point(134, 78);
             this.txtContraseña.MaxLength = 10;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 8;
             // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(19, 74);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(38, 13);
-            this.lblCorreo.TabIndex = 7;
-            this.lblCorreo.Text = "Correo";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(134, 68);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(100, 20);
-            this.txtCorreo.TabIndex = 6;
-            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(174, 49);
+            this.lblTitulo.Location = new System.Drawing.Point(245, 25);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(91, 13);
             this.lblTitulo.TabIndex = 5;
@@ -100,9 +89,7 @@
             this.gpbInfoCuenta.Controls.Add(this.lblNomUsuario);
             this.gpbInfoCuenta.Controls.Add(this.txtContraseña);
             this.gpbInfoCuenta.Controls.Add(this.label1);
-            this.gpbInfoCuenta.Controls.Add(this.txtCorreo);
-            this.gpbInfoCuenta.Controls.Add(this.lblCorreo);
-            this.gpbInfoCuenta.Location = new System.Drawing.Point(43, 89);
+            this.gpbInfoCuenta.Location = new System.Drawing.Point(411, 93);
             this.gpbInfoCuenta.Name = "gpbInfoCuenta";
             this.gpbInfoCuenta.Size = new System.Drawing.Size(253, 156);
             this.gpbInfoCuenta.TabIndex = 10;
@@ -127,6 +114,13 @@
             // 
             // gpbInfoPersonal
             // 
+            this.gpbInfoPersonal.Controls.Add(this.cmbGenero);
+            this.gpbInfoPersonal.Controls.Add(this.lblGenero);
+            this.gpbInfoPersonal.Controls.Add(this.txtCorreo);
+            this.gpbInfoPersonal.Controls.Add(this.lblCorreo);
+            this.gpbInfoPersonal.Controls.Add(this.txtDocumento);
+            this.gpbInfoPersonal.Controls.Add(this.cmbTipoDocumento);
+            this.gpbInfoPersonal.Controls.Add(this.lblTipoDocumento);
             this.gpbInfoPersonal.Controls.Add(this.txttelefono);
             this.gpbInfoPersonal.Controls.Add(this.lblCelular);
             this.gpbInfoPersonal.Controls.Add(this.dtpNacimiento);
@@ -137,44 +131,84 @@
             this.gpbInfoPersonal.Controls.Add(this.lblPaterno);
             this.gpbInfoPersonal.Controls.Add(this.txtNombres);
             this.gpbInfoPersonal.Controls.Add(this.lblNombres);
-            this.gpbInfoPersonal.Location = new System.Drawing.Point(324, 89);
+            this.gpbInfoPersonal.Location = new System.Drawing.Point(28, 82);
             this.gpbInfoPersonal.Name = "gpbInfoPersonal";
-            this.gpbInfoPersonal.Size = new System.Drawing.Size(360, 228);
+            this.gpbInfoPersonal.Size = new System.Drawing.Size(360, 356);
             this.gpbInfoPersonal.TabIndex = 11;
             this.gpbInfoPersonal.TabStop = false;
             this.gpbInfoPersonal.Text = "Informacion Personal";
             // 
-            // txtNombres
+            // txtCorreo
             // 
-            this.txtNombres.Location = new System.Drawing.Point(134, 33);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(194, 20);
-            this.txtNombres.TabIndex = 12;
+            this.txtCorreo.Location = new System.Drawing.Point(134, 270);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(194, 20);
+            this.txtCorreo.TabIndex = 26;
             // 
-            // lblNombres
+            // lblCorreo
             // 
-            this.lblNombres.AutoSize = true;
-            this.lblNombres.Location = new System.Drawing.Point(79, 40);
-            this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(49, 13);
-            this.lblNombres.TabIndex = 13;
-            this.lblNombres.Text = "Nombres";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Location = new System.Drawing.Point(79, 273);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(38, 13);
+            this.lblCorreo.TabIndex = 25;
+            this.lblCorreo.Text = "Correo";
             // 
-            // txtPaterno
+            // txtDocumento
             // 
-            this.txtPaterno.Location = new System.Drawing.Point(134, 66);
-            this.txtPaterno.Name = "txtPaterno";
-            this.txtPaterno.Size = new System.Drawing.Size(194, 20);
-            this.txtPaterno.TabIndex = 14;
+            this.txtDocumento.Location = new System.Drawing.Point(163, 167);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(121, 20);
+            this.txtDocumento.TabIndex = 24;
             // 
-            // lblPaterno
+            // cmbTipoDocumento
             // 
-            this.lblPaterno.AutoSize = true;
-            this.lblPaterno.Location = new System.Drawing.Point(44, 73);
-            this.lblPaterno.Name = "lblPaterno";
-            this.lblPaterno.Size = new System.Drawing.Size(84, 13);
-            this.lblPaterno.TabIndex = 15;
-            this.lblPaterno.Text = "Apellido Paterno";
+            this.cmbTipoDocumento.FormattingEnabled = true;
+            this.cmbTipoDocumento.Location = new System.Drawing.Point(163, 140);
+            this.cmbTipoDocumento.Name = "cmbTipoDocumento";
+            this.cmbTipoDocumento.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoDocumento.TabIndex = 23;
+            // 
+            // lblTipoDocumento
+            // 
+            this.lblTipoDocumento.AutoSize = true;
+            this.lblTipoDocumento.Location = new System.Drawing.Point(42, 140);
+            this.lblTipoDocumento.Name = "lblTipoDocumento";
+            this.lblTipoDocumento.Size = new System.Drawing.Size(101, 13);
+            this.lblTipoDocumento.TabIndex = 22;
+            this.lblTipoDocumento.Text = "Tipo de Documento";
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(134, 244);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(194, 20);
+            this.txttelefono.TabIndex = 21;
+            // 
+            // lblCelular
+            // 
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Location = new System.Drawing.Point(73, 244);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(49, 13);
+            this.lblCelular.TabIndex = 20;
+            this.lblCelular.Text = "Telefono";
+            // 
+            // dtpNacimiento
+            // 
+            this.dtpNacimiento.Location = new System.Drawing.Point(128, 206);
+            this.dtpNacimiento.Name = "dtpNacimiento";
+            this.dtpNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpNacimiento.TabIndex = 19;
+            // 
+            // lblFechaNacimiento
+            // 
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(14, 212);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(108, 13);
+            this.lblFechaNacimiento.TabIndex = 18;
+            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             // 
             // txtMaterno
             // 
@@ -192,41 +226,41 @@
             this.lblMaterno.TabIndex = 17;
             this.lblMaterno.Text = "Apellido Materno";
             // 
-            // lblFechaNacimiento
+            // txtPaterno
             // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(20, 154);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(108, 13);
-            this.lblFechaNacimiento.TabIndex = 18;
-            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
+            this.txtPaterno.Location = new System.Drawing.Point(134, 66);
+            this.txtPaterno.Name = "txtPaterno";
+            this.txtPaterno.Size = new System.Drawing.Size(194, 20);
+            this.txtPaterno.TabIndex = 14;
             // 
-            // dtpNacimiento
+            // lblPaterno
             // 
-            this.dtpNacimiento.Location = new System.Drawing.Point(134, 148);
-            this.dtpNacimiento.Name = "dtpNacimiento";
-            this.dtpNacimiento.Size = new System.Drawing.Size(200, 20);
-            this.dtpNacimiento.TabIndex = 19;
+            this.lblPaterno.AutoSize = true;
+            this.lblPaterno.Location = new System.Drawing.Point(44, 73);
+            this.lblPaterno.Name = "lblPaterno";
+            this.lblPaterno.Size = new System.Drawing.Size(84, 13);
+            this.lblPaterno.TabIndex = 15;
+            this.lblPaterno.Text = "Apellido Paterno";
             // 
-            // lblCelular
+            // txtNombres
             // 
-            this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(79, 186);
-            this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(49, 13);
-            this.lblCelular.TabIndex = 20;
-            this.lblCelular.Text = "Telefono";
+            this.txtNombres.Location = new System.Drawing.Point(134, 33);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(194, 20);
+            this.txtNombres.TabIndex = 12;
             // 
-            // txttelefono
+            // lblNombres
             // 
-            this.txttelefono.Location = new System.Drawing.Point(140, 186);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(194, 20);
-            this.txttelefono.TabIndex = 21;
+            this.lblNombres.AutoSize = true;
+            this.lblNombres.Location = new System.Drawing.Point(79, 40);
+            this.lblNombres.Name = "lblNombres";
+            this.lblNombres.Size = new System.Drawing.Size(49, 13);
+            this.lblNombres.TabIndex = 13;
+            this.lblNombres.Text = "Nombres";
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(43, 265);
+            this.btnCrear.Location = new System.Drawing.Point(589, 264);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(75, 23);
             this.btnCrear.TabIndex = 12;
@@ -234,17 +268,38 @@
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Location = new System.Drawing.Point(79, 299);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(42, 13);
+            this.lblGenero.TabIndex = 27;
+            this.lblGenero.Text = "Genero";
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cmbGenero.Location = new System.Drawing.Point(134, 299);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(194, 21);
+            this.cmbGenero.TabIndex = 28;
+            // 
             // frmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(711, 450);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.gpbInfoPersonal);
             this.Controls.Add(this.gpbInfoCuenta);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmCrearCuenta";
             this.Text = "frmCrearCuenta";
+            this.Load += new System.EventHandler(this.frmCrearCuenta_Load);
             this.gpbInfoCuenta.ResumeLayout(false);
             this.gpbInfoCuenta.PerformLayout();
             this.gpbInfoPersonal.ResumeLayout(false);
@@ -258,8 +313,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox gpbInfoCuenta;
         private System.Windows.Forms.TextBox txtNomUsuario;
@@ -276,5 +329,12 @@
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.TextBox txtDocumento;
+        private System.Windows.Forms.ComboBox cmbTipoDocumento;
+        private System.Windows.Forms.Label lblTipoDocumento;
+        private System.Windows.Forms.ComboBox cmbGenero;
+        private System.Windows.Forms.Label lblGenero;
     }
 }

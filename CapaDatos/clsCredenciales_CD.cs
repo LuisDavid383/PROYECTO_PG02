@@ -10,17 +10,17 @@ namespace CapaDatos
     public class clsCredenciales_CD
     {
         //METODO QUE VERIFICA SI EXISTE LAS CREDENCIALES CON LAS CUALES SE QUIERE INGRESAR AL SISTEMA
-        public bool mtdCValidarCredencialesCD(string Correo, string Clave)
+        public bool mtdCValidarCredencialesCD(string NombreUsuario, string Clave)
         {
             using (SqlConnection connection = clsConexion_CD.mtdObtenerConexion())
             {
                 connection.Open();
 
-                string query = "SELECT * FROM tbUsuario WHERE Correo = @Correo AND Clave = @Clave";
+                string query = "SELECT * FROM tbUsuario WHERE NombreUsuario = @NombreUsuario AND Clave = @Clave";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Correo", Correo);
+                    command.Parameters.AddWithValue("@NombreUsuario", NombreUsuario);
                     command.Parameters.AddWithValue("@Clave", Clave);
 
                     using (SqlDataReader reader = command.ExecuteReader())

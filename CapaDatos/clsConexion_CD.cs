@@ -9,9 +9,9 @@ namespace CapaDatos
 {
     public static class clsConexion_CD
     {
-        private static readonly string connectionString = "server = David; " +
-                                                           "database= PG02_SISTEMA_GESTION_DEPORTIVA; " +
-                                                           "integrated security = true";
+        private static readonly string connectionString = @"server = David; 
+                                                            database= PRUEBADEPORTE; 
+                                                            integrated security = true";
 
         //METODO PARA ENGLOBAR A TODOS LAS CLASES LA CADENA DE CONEXION
         public static SqlConnection mtdObtenerConexion()

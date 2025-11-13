@@ -54,5 +54,11 @@ namespace CapaPresentacion
                 MessageBox.Show("Error: " + ex);
             }
         }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            frmCrearCuenta CrearCuenta = new frmCrearCuenta();
+            CrearCuenta.ShowDialog();
+        }
     }
 }

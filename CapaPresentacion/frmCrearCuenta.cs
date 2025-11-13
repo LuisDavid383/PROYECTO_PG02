@@ -22,16 +22,24 @@ namespace CapaPresentacion
 
         public bool mtdVerficarCamposVacios()
         {
-            
-            
-            return true;
+            if (string.IsNullOrEmpty(txtNombres.Text))
+            {
+                MessageBox.Show("No dejar dato nombre vacio");
+                return true;
+            }
+
+            return false;
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
+            if (mtdVerficarCamposVacios())
+            {
+                return;
+            }
+
             //INFORMACION DE LA CUENTA
             string NombreUsuario = txtNomUsuario.Text;
-            string Correo = txtCorreo.Text;
             string Clave = txtContraseña.Text;
             
 
@@ -39,24 +47,44 @@ namespace CapaPresentacion
             string Nombres = txtNombres.Text;
             string ApellidoPaterno = txtPaterno.Text;
             string ApellidoMaterno = txtMaterno.Text;
+            string Documento = txtDocumento.Text;
+            string Genero = cmbGenero.Text;
+
+            int IDTipoDocumento = Convert.ToInt32(cmbTipoDocumento.SelectedValue);
+
             DateTime FechaNacimiento = dtpNacimiento.Value;
             string Telefono = txttelefono.Text;
+            string Correo = txtCorreo.Text;
 
             try
             {
-                ObjCrearCuenta.mtdCrearCuentaCN(NombreUsuario,
-                                                Correo,
-                                                Clave,
-                                                Nombres,
+
+                ObjCrearCuenta.mtdCrearCuentaCN(Nombres,
                                                 ApellidoPaterno,
-                                                ApellidoMaterno,
-                                                FechaNacimiento,
-                                                Telefono);
+                                                ApellidoMaterno, 
+                                                IDTipoDocumento, 
+                                                Documento, 
+                                                FechaNacimiento, 
+                                                Telefono, 
+                                                Correo, 
+                                                Genero,
+                                                NombreUsuario,
+                                                Clave);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
             }
+        }
+
+        private void frmCrearCuenta_Load(object sender, EventArgs e)
+        {
+            //https://es.stackoverflow.com/questions/339323/cargar-datos-en-textbox-usando-combobox-conectado-con-sql
+            cmbTipoDocumento.DataSource = ObjCrearCuenta.mtdListarTipoDocumentoActivosCD();
+            cmbTipoDocumento.DisplayMember = "TipoDocumento";
+            cmbTipoDocumento.ValueMember = "IDTipoDocumento";
+
+            cmbTipoDocumento.SelectedIndex = -1;
         }
     }
 }
