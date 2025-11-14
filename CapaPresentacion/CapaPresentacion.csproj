@@ -52,10 +52,10 @@
     <Compile Include="frmCarga.Designer.cs">
       <DependentUpon>frmCarga.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCrearCuenta.cs">
+    <Compile Include="Login\frmCrearCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCrearCuenta.Designer.cs">
+    <Compile Include="Login\frmCrearCuenta.Designer.cs">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCrearEquipo.cs">
@@ -64,10 +64,10 @@
     <Compile Include="frmCrearEquipo.Designer.cs">
       <DependentUpon>frmCrearEquipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInicioSesion.cs">
+    <Compile Include="Login\frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInicioSesion.Designer.cs">
+    <Compile Include="Login\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInvitarUsuarioEquipo.cs">
@@ -84,13 +84,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCrearCuenta.resx">
+    <EmbeddedResource Include="Login\frmCrearCuenta.resx">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCrearEquipo.resx">
       <DependentUpon>frmCrearEquipo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInicioSesion.resx">
+    <EmbeddedResource Include="Login\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInvitarUsuarioEquipo.resx">
