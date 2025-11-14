@@ -31,7 +31,23 @@ namespace CapaPresentacion
             return false;
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
+        private void frmCrearCuenta_Load(object sender, EventArgs e)
+        {
+            //https://es.stackoverflow.com/questions/339323/cargar-datos-en-textbox-usando-combobox-conectado-con-sql
+            cmbTipoDocumento.DataSource = ObjCrearCuenta.mtdListarTipoDocumentoActivosCD();
+            cmbTipoDocumento.DisplayMember = "TipoDocumento";
+            cmbTipoDocumento.ValueMember = "IDTipoDocumento";
+
+            cmbTipoDocumento.SelectedIndex = -1;
+        }
+
+        private void lnkIniciaSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmInicioSesion frmInicioSesion = new frmInicioSesion();
+            frmInicioSesion.Show();
+        }
+
+        private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
             if (mtdVerficarCamposVacios())
             {
@@ -41,7 +57,7 @@ namespace CapaPresentacion
             //INFORMACION DE LA CUENTA
             string NombreUsuario = txtNomUsuario.Text;
             string Clave = txtContraseña.Text;
-            
+
 
             //INFORMACION PERSONAL
             string Nombres = txtNombres.Text.ToUpper();
@@ -65,12 +81,12 @@ namespace CapaPresentacion
 
                 ObjCrearCuenta.mtdCrearCuentaCN(Nombres,
                                                 ApellidoPaterno,
-                                                ApellidoMaterno, 
-                                                IDTipoDocumento, 
-                                                Documento, 
-                                                FechaNacimiento, 
-                                                Telefono, 
-                                                Correo, 
+                                                ApellidoMaterno,
+                                                IDTipoDocumento,
+                                                Documento,
+                                                FechaNacimiento,
+                                                Telefono,
+                                                Correo,
                                                 Genero,
                                                 NombreUsuario,
                                                 Clave);
@@ -79,16 +95,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error: " + ex);
             }
-        }
-
-        private void frmCrearCuenta_Load(object sender, EventArgs e)
-        {
-            //https://es.stackoverflow.com/questions/339323/cargar-datos-en-textbox-usando-combobox-conectado-con-sql
-            cmbTipoDocumento.DataSource = ObjCrearCuenta.mtdListarTipoDocumentoActivosCD();
-            cmbTipoDocumento.DisplayMember = "TipoDocumento";
-            cmbTipoDocumento.ValueMember = "IDTipoDocumento";
-
-            cmbTipoDocumento.SelectedIndex = -1;
         }
     }
 }

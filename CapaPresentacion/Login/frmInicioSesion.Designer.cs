@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -39,10 +40,11 @@
             this.ptbCerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lnkCrearCuenta = new System.Windows.Forms.LinkLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.epLogin = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -151,16 +153,9 @@
             this.lnkCrearCuenta.Text = "¿No tienes cuenta?";
             this.lnkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCrearCuenta_LinkClicked);
             // 
-            // checkBox1
+            // epLogin
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(27, 387);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(126, 17);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Recordar contraseña";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.epLogin.ContainerControl = this;
             // 
             // frmInicioSesion
             // 
@@ -168,7 +163,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(63)))), ((int)(((byte)(105)))));
             this.ClientSize = new System.Drawing.Size(303, 514);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.lnkCrearCuenta);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
@@ -185,6 +179,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +197,7 @@
         private System.Windows.Forms.PictureBox ptbCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lnkCrearCuenta;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ErrorProvider epLogin;
     }
 }
 

@@ -20,18 +20,38 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        //METODO QUE VALIDA QUE NO SE INGRESEN CAMPOS VACIOS
+        private bool mtdValidarCampoVacio(TextBox txt, string mensaje)
+        {
+            if (string.IsNullOrWhiteSpace(txt.Text))
+            {
+                epLogin.SetError(txt, mensaje);
+                return false;
+            }
+            else
+            {
+                epLogin.SetError(txt, "");
+                return true;
+            }
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            epLogin.Clear();
+
+            //DAR A CNOCER QUE NO PUEDE ESTAR VACIO
+            bool correoValido = mtdValidarCampoVacio(txtCorreo, "El correo no puede estar vacío");
+            bool claveValida = mtdValidarCampoVacio(txtContraseña, "La contraseña no puede estar vacía");
+
+            // Si alguno falla, detener
+            if (!correoValido || !claveValida)
+            {
+                return;
+            }
+
             //VALORES
             string correo = txtCorreo.Text;
             string clave = txtContraseña.Text;
-
-            //VERIFICAR QUE NO SE INGRESEN
-            if (string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text))
-            {
-                MessageBox.Show("No puede dejar espacios en blanco");
-                return;
-            }
 
             try
             {
