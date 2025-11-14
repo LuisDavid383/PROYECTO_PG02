@@ -63,5 +63,19 @@ namespace CapaPresentacion
                 }
             }
         }
+
+        private void btnListaInvitados_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtIDEquipo.Text))
+            {
+                MessageBox.Show("Selecione un equipo");
+                return;
+            }
+
+            string IDEquipo = txtIDEquipo.Text;
+
+            frmListaInvitadosEquipo listaInvitadosEquipo = new frmListaInvitadosEquipo(IDEquipo);
+            listaInvitadosEquipo.ShowDialog();
+        }
     }
 }

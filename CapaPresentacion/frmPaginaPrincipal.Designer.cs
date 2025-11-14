@@ -34,6 +34,7 @@
             this.dgvEquiposUsuario = new System.Windows.Forms.DataGridView();
             this.btnInvitar = new System.Windows.Forms.Button();
             this.txtIDEquipo = new System.Windows.Forms.TextBox();
+            this.btnListaInvitados = new System.Windows.Forms.Button();
             this.gpbAcciones.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposUsuario)).BeginInit();
@@ -99,11 +100,22 @@
             this.txtIDEquipo.Size = new System.Drawing.Size(100, 20);
             this.txtIDEquipo.TabIndex = 4;
             // 
+            // btnListaInvitados
+            // 
+            this.btnListaInvitados.Location = new System.Drawing.Point(492, 258);
+            this.btnListaInvitados.Name = "btnListaInvitados";
+            this.btnListaInvitados.Size = new System.Drawing.Size(124, 23);
+            this.btnListaInvitados.TabIndex = 5;
+            this.btnListaInvitados.Text = "Ver Lista Invitados";
+            this.btnListaInvitados.UseVisualStyleBackColor = true;
+            this.btnListaInvitados.Click += new System.EventHandler(this.btnListaInvitados_Click);
+            // 
             // frmPaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(749, 450);
+            this.Controls.Add(this.btnListaInvitados);
             this.Controls.Add(this.txtIDEquipo);
             this.Controls.Add(this.btnInvitar);
             this.Controls.Add(this.groupBox1);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.DataGridView dgvEquiposUsuario;
         private System.Windows.Forms.Button btnInvitar;
         private System.Windows.Forms.TextBox txtIDEquipo;
+        private System.Windows.Forms.Button btnListaInvitados;
     }
 }

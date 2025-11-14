@@ -52,16 +52,22 @@
     <Compile Include="frmCarga.Designer.cs">
       <DependentUpon>frmCarga.cs</DependentUpon>
     </Compile>
+    <Compile Include="Equipo\frmListaInvitadosEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipo\frmListaInvitadosEquipo.Designer.cs">
+      <DependentUpon>frmListaInvitadosEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\frmCrearCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\frmCrearCuenta.Designer.cs">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCrearEquipo.cs">
+    <Compile Include="Equipo\frmCrearEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCrearEquipo.Designer.cs">
+    <Compile Include="Equipo\frmCrearEquipo.Designer.cs">
       <DependentUpon>frmCrearEquipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\frmInicioSesion.cs">
@@ -70,10 +76,10 @@
     <Compile Include="Login\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInvitarUsuarioEquipo.cs">
+    <Compile Include="Equipo\frmInvitarUsuarioEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInvitarUsuarioEquipo.Designer.cs">
+    <Compile Include="Equipo\frmInvitarUsuarioEquipo.Designer.cs">
       <DependentUpon>frmInvitarUsuarioEquipo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPaginaPrincipal.cs">
@@ -87,13 +93,13 @@
     <EmbeddedResource Include="Login\frmCrearCuenta.resx">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCrearEquipo.resx">
+    <EmbeddedResource Include="Equipo\frmCrearEquipo.resx">
       <DependentUpon>frmCrearEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInvitarUsuarioEquipo.resx">
+    <EmbeddedResource Include="Equipo\frmInvitarUsuarioEquipo.resx">
       <DependentUpon>frmInvitarUsuarioEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPaginaPrincipal.resx">
