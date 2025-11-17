@@ -134,7 +134,7 @@ namespace CapaPresentacion
 
         private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmCrearCuen CrearCuenta = new frmCrearCuen();
+            frmCrearCuenta CrearCuenta = new frmCrearCuenta();
             CrearCuenta.ShowDialog();
         }
     }
