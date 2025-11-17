@@ -28,163 +28,191 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ptbCerrar = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lnkCrearCuenta = new System.Windows.Forms.LinkLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.panel2.SuspendLayout();
+            this.lblErrorUsuario = new System.Windows.Forms.Label();
+            this.ptbMinimizar = new System.Windows.Forms.PictureBox();
+            this.ptbCerrar = new System.Windows.Forms.PictureBox();
+            this.lblErrorContraseña = new System.Windows.Forms.Label();
+            this.lineControl2 = new LineControl();
+            this.lineControl1 = new LineControl();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTitulo
+            // panel1
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitulo.Location = new System.Drawing.Point(115, 20);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(89, 13);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "INICIAR SESION";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 291);
+            this.panel1.TabIndex = 0;
             // 
-            // txtCorreo
+            // txtUsuario
             // 
-            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(96)))), ((int)(((byte)(130)))));
-            this.txtCorreo.Location = new System.Drawing.Point(27, 267);
-            this.txtCorreo.MaxLength = 50;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(252, 20);
-            this.txtCorreo.TabIndex = 1;
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUsuario.Location = new System.Drawing.Point(316, 57);
+            this.txtUsuario.MaxLength = 50;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(372, 20);
+            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
-            // lblCorreo
+            // txtContraseña
             // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCorreo.Location = new System.Drawing.Point(24, 241);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(43, 13);
-            this.lblCorreo.TabIndex = 2;
-            this.lblCorreo.Text = "Usuario";
+            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContraseña.Location = new System.Drawing.Point(316, 125);
+            this.txtContraseña.MaxLength = 25;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(372, 20);
+            this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.Text = "CONTRASEÑA";
+            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
+            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(24, 314);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(447, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Contraseña";
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(96)))), ((int)(((byte)(130)))));
-            this.txtContraseña.Location = new System.Drawing.Point(27, 342);
-            this.txtContraseña.MaxLength = 25;
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(252, 20);
-            this.txtContraseña.TabIndex = 3;
+            this.label1.Size = new System.Drawing.Size(107, 36);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "LOGIN";
             // 
             // btnIngresar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(103)))), ((int)(((byte)(242)))));
+            this.btnIngresar.BackColor = System.Drawing.Color.LightGray;
+            this.btnIngresar.FlatAppearance.BorderSize = 0;
+            this.btnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Location = new System.Drawing.Point(85, 422);
+            this.btnIngresar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Location = new System.Drawing.Point(316, 188);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(122, 28);
-            this.btnIngresar.TabIndex = 5;
-            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.Size = new System.Drawing.Size(372, 40);
+            this.btnIngresar.TabIndex = 3;
+            this.btnIngresar.Text = "INGRESAR";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // panel2
+            // lnkCrearCuenta
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(43)))), ((int)(((byte)(73)))));
-            this.panel2.Controls.Add(this.ptbCerrar);
-            this.panel2.Controls.Add(this.lblTitulo);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(303, 50);
-            this.panel2.TabIndex = 8;
+            this.lnkCrearCuenta.AutoSize = true;
+            this.lnkCrearCuenta.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkCrearCuenta.LinkColor = System.Drawing.Color.DimGray;
+            this.lnkCrearCuenta.Location = new System.Drawing.Point(435, 248);
+            this.lnkCrearCuenta.Name = "lnkCrearCuenta";
+            this.lnkCrearCuenta.Size = new System.Drawing.Size(138, 16);
+            this.lnkCrearCuenta.TabIndex = 0;
+            this.lnkCrearCuenta.TabStop = true;
+            this.lnkCrearCuenta.Text = "¿No tienes una cuenta?";
+            // 
+            // lblErrorUsuario
+            // 
+            this.lblErrorUsuario.AutoSize = true;
+            this.lblErrorUsuario.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorUsuario.ForeColor = System.Drawing.Color.LightCoral;
+            this.lblErrorUsuario.Image = global::CapaPresentacion.Properties.Resources.imgWarningRed20x20;
+            this.lblErrorUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblErrorUsuario.Location = new System.Drawing.Point(316, 90);
+            this.lblErrorUsuario.Name = "lblErrorUsuario";
+            this.lblErrorUsuario.Size = new System.Drawing.Size(96, 16);
+            this.lblErrorUsuario.TabIndex = 8;
+            this.lblErrorUsuario.Text = "Mensaje de Error";
+            // 
+            // ptbMinimizar
+            // 
+            this.ptbMinimizar.Image = global::CapaPresentacion.Properties.Resources.imgMinimizar;
+            this.ptbMinimizar.Location = new System.Drawing.Point(676, 12);
+            this.ptbMinimizar.Name = "ptbMinimizar";
+            this.ptbMinimizar.Size = new System.Drawing.Size(30, 30);
+            this.ptbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbMinimizar.TabIndex = 7;
+            this.ptbMinimizar.TabStop = false;
+            this.ptbMinimizar.Click += new System.EventHandler(this.ptbMinimizar_Click);
             // 
             // ptbCerrar
             // 
-            this.ptbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("ptbCerrar.Image")));
-            this.ptbCerrar.Location = new System.Drawing.Point(254, 12);
+            this.ptbCerrar.Image = global::CapaPresentacion.Properties.Resources.ImgCerrar;
+            this.ptbCerrar.Location = new System.Drawing.Point(712, 12);
             this.ptbCerrar.Name = "ptbCerrar";
-            this.ptbCerrar.Size = new System.Drawing.Size(25, 25);
-            this.ptbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbCerrar.TabIndex = 0;
+            this.ptbCerrar.Size = new System.Drawing.Size(30, 30);
+            this.ptbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbCerrar.TabIndex = 6;
             this.ptbCerrar.TabStop = false;
             this.ptbCerrar.Click += new System.EventHandler(this.ptbCerrar_Click);
             // 
-            // pictureBox1
+            // lblErrorContraseña
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(85, 79);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 134);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.lblErrorContraseña.AutoSize = true;
+            this.lblErrorContraseña.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorContraseña.ForeColor = System.Drawing.Color.LightCoral;
+            this.lblErrorContraseña.Image = global::CapaPresentacion.Properties.Resources.imgWarningRed20x20;
+            this.lblErrorContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblErrorContraseña.Location = new System.Drawing.Point(316, 159);
+            this.lblErrorContraseña.Name = "lblErrorContraseña";
+            this.lblErrorContraseña.Size = new System.Drawing.Size(96, 16);
+            this.lblErrorContraseña.TabIndex = 9;
+            this.lblErrorContraseña.Text = "Mensaje de Error";
             // 
-            // lnkCrearCuenta
+            // lineControl2
             // 
-            this.lnkCrearCuenta.ActiveLinkColor = System.Drawing.Color.Chartreuse;
-            this.lnkCrearCuenta.AutoSize = true;
-            this.lnkCrearCuenta.LinkColor = System.Drawing.Color.White;
-            this.lnkCrearCuenta.Location = new System.Drawing.Point(95, 471);
-            this.lnkCrearCuenta.Name = "lnkCrearCuenta";
-            this.lnkCrearCuenta.Size = new System.Drawing.Size(100, 13);
-            this.lnkCrearCuenta.TabIndex = 10;
-            this.lnkCrearCuenta.TabStop = true;
-            this.lnkCrearCuenta.Text = "¿No tienes cuenta?";
-            this.lnkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCrearCuenta_LinkClicked);
+            this.lineControl2.LineColor = System.Drawing.Color.White;
+            this.lineControl2.Location = new System.Drawing.Point(316, 148);
+            this.lineControl2.Name = "lineControl2";
+            this.lineControl2.Size = new System.Drawing.Size(372, 10);
+            this.lineControl2.TabIndex = 4;
+            this.lineControl2.Text = "lineControl2";
             // 
-            // checkBox1
+            // lineControl1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(27, 387);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(126, 17);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "Recordar contraseña";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.lineControl1.LineColor = System.Drawing.Color.White;
+            this.lineControl1.Location = new System.Drawing.Point(316, 80);
+            this.lineControl1.Name = "lineControl1";
+            this.lineControl1.Size = new System.Drawing.Size(372, 10);
+            this.lineControl1.TabIndex = 2;
+            this.lineControl1.Text = "lineControl1";
             // 
-            // frmInicioSesion
+            // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(63)))), ((int)(((byte)(105)))));
-            this.ClientSize = new System.Drawing.Size(303, 514);
-            this.Controls.Add(this.checkBox1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ClientSize = new System.Drawing.Size(764, 291);
+            this.Controls.Add(this.lblErrorContraseña);
+            this.Controls.Add(this.lblErrorUsuario);
+            this.Controls.Add(this.ptbMinimizar);
+            this.Controls.Add(this.ptbCerrar);
             this.Controls.Add(this.lnkCrearCuenta);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lineControl2);
             this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.lblCorreo);
-            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.lineControl1);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmInicioSesion";
+            this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Text = "frmInicio";
+            this.Load += new System.EventHandler(this.frmInicio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,17 +220,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private LineControl lineControl1;
+        private LineControl lineControl2;
         private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox ptbCerrar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lnkCrearCuenta;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.PictureBox ptbCerrar;
+        private System.Windows.Forms.PictureBox ptbMinimizar;
+        private System.Windows.Forms.Label lblErrorUsuario;
+        private System.Windows.Forms.Label lblErrorContraseña;
     }
 }
-
