@@ -131,5 +131,11 @@ namespace CapaPresentacion
             lblErrorUsuario.Visible = false;
             lblErrorContraseña.Visible = false;
         }
+
+        private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCrearCuen CrearCuenta = new frmCrearCuen();
+            CrearCuenta.ShowDialog();
+        }
     }
 }

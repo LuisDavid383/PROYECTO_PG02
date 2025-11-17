@@ -34,10 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.lnkCrearCuenta = new System.Windows.Forms.LinkLabel();
+            this.lblErrorContraseña = new System.Windows.Forms.Label();
             this.lblErrorUsuario = new System.Windows.Forms.Label();
             this.ptbMinimizar = new System.Windows.Forms.PictureBox();
             this.ptbCerrar = new System.Windows.Forms.PictureBox();
-            this.lblErrorContraseña = new System.Windows.Forms.Label();
             this.lineControl2 = new LineControl();
             this.lineControl1 = new LineControl();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMinimizar)).BeginInit();
@@ -46,7 +46,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -121,6 +121,20 @@
             this.lnkCrearCuenta.TabIndex = 0;
             this.lnkCrearCuenta.TabStop = true;
             this.lnkCrearCuenta.Text = "¿No tienes una cuenta?";
+            this.lnkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCrearCuenta_LinkClicked);
+            // 
+            // lblErrorContraseña
+            // 
+            this.lblErrorContraseña.AutoSize = true;
+            this.lblErrorContraseña.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorContraseña.ForeColor = System.Drawing.Color.LightCoral;
+            this.lblErrorContraseña.Image = global::CapaPresentacion.Properties.Resources.imgWarningRed20x20;
+            this.lblErrorContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblErrorContraseña.Location = new System.Drawing.Point(316, 159);
+            this.lblErrorContraseña.Name = "lblErrorContraseña";
+            this.lblErrorContraseña.Size = new System.Drawing.Size(96, 16);
+            this.lblErrorContraseña.TabIndex = 9;
+            this.lblErrorContraseña.Text = "Mensaje de Error";
             // 
             // lblErrorUsuario
             // 
@@ -157,19 +171,6 @@
             this.ptbCerrar.TabStop = false;
             this.ptbCerrar.Click += new System.EventHandler(this.ptbCerrar_Click);
             // 
-            // lblErrorContraseña
-            // 
-            this.lblErrorContraseña.AutoSize = true;
-            this.lblErrorContraseña.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorContraseña.ForeColor = System.Drawing.Color.LightCoral;
-            this.lblErrorContraseña.Image = global::CapaPresentacion.Properties.Resources.imgWarningRed20x20;
-            this.lblErrorContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblErrorContraseña.Location = new System.Drawing.Point(316, 159);
-            this.lblErrorContraseña.Name = "lblErrorContraseña";
-            this.lblErrorContraseña.Size = new System.Drawing.Size(96, 16);
-            this.lblErrorContraseña.TabIndex = 9;
-            this.lblErrorContraseña.Text = "Mensaje de Error";
-            // 
             // lineControl2
             // 
             this.lineControl2.LineColor = System.Drawing.Color.White;
@@ -188,7 +189,7 @@
             this.lineControl1.TabIndex = 2;
             this.lineControl1.Text = "lineControl1";
             // 
-            // frmInicio
+            // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,7 +208,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmInicio";
+            this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInicio";
             this.Load += new System.EventHandler(this.frmInicio_Load);
