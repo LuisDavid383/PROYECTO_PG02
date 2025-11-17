@@ -35,6 +35,8 @@
             this.txtNomUsuario = new System.Windows.Forms.TextBox();
             this.lblNomUsuario = new System.Windows.Forms.Label();
             this.gpbInfoPersonal = new System.Windows.Forms.GroupBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.lblGenero = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.lblNombres = new System.Windows.Forms.Label();
             this.btnCrear = new System.Windows.Forms.Button();
-            this.lblGenero = new System.Windows.Forms.Label();
-            this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.gpbInfoCuenta.SuspendLayout();
             this.gpbInfoPersonal.SuspendLayout();
             this.SuspendLayout();
@@ -138,9 +138,29 @@
             this.gpbInfoPersonal.TabStop = false;
             this.gpbInfoPersonal.Text = "Informacion Personal";
             // 
+            // cmbGenero
+            // 
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cmbGenero.Location = new System.Drawing.Point(134, 299);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(194, 21);
+            this.cmbGenero.TabIndex = 28;
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Location = new System.Drawing.Point(79, 299);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(42, 13);
+            this.lblGenero.TabIndex = 27;
+            this.lblGenero.Text = "Genero";
+            // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(134, 270);
+            this.txtCorreo.Location = new System.Drawing.Point(76, 270);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(194, 20);
             this.txtCorreo.TabIndex = 26;
@@ -148,7 +168,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(79, 273);
+            this.lblCorreo.Location = new System.Drawing.Point(21, 273);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(38, 13);
             this.lblCorreo.TabIndex = 25;
@@ -156,7 +176,7 @@
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(163, 167);
+            this.txtDocumento.Location = new System.Drawing.Point(134, 147);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(121, 20);
             this.txtDocumento.TabIndex = 24;
@@ -164,7 +184,7 @@
             // cmbTipoDocumento
             // 
             this.cmbTipoDocumento.FormattingEnabled = true;
-            this.cmbTipoDocumento.Location = new System.Drawing.Point(163, 140);
+            this.cmbTipoDocumento.Location = new System.Drawing.Point(134, 120);
             this.cmbTipoDocumento.Name = "cmbTipoDocumento";
             this.cmbTipoDocumento.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoDocumento.TabIndex = 23;
@@ -172,7 +192,7 @@
             // lblTipoDocumento
             // 
             this.lblTipoDocumento.AutoSize = true;
-            this.lblTipoDocumento.Location = new System.Drawing.Point(42, 140);
+            this.lblTipoDocumento.Location = new System.Drawing.Point(13, 120);
             this.lblTipoDocumento.Name = "lblTipoDocumento";
             this.lblTipoDocumento.Size = new System.Drawing.Size(101, 13);
             this.lblTipoDocumento.TabIndex = 22;
@@ -196,7 +216,7 @@
             // 
             // dtpNacimiento
             // 
-            this.dtpNacimiento.Location = new System.Drawing.Point(128, 206);
+            this.dtpNacimiento.Location = new System.Drawing.Point(114, 173);
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dtpNacimiento.TabIndex = 19;
@@ -204,7 +224,7 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(14, 212);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(0, 179);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(108, 13);
             this.lblFechaNacimiento.TabIndex = 18;
@@ -212,7 +232,7 @@
             // 
             // txtMaterno
             // 
-            this.txtMaterno.Location = new System.Drawing.Point(134, 104);
+            this.txtMaterno.Location = new System.Drawing.Point(102, 85);
             this.txtMaterno.Name = "txtMaterno";
             this.txtMaterno.Size = new System.Drawing.Size(194, 20);
             this.txtMaterno.TabIndex = 16;
@@ -220,7 +240,7 @@
             // lblMaterno
             // 
             this.lblMaterno.AutoSize = true;
-            this.lblMaterno.Location = new System.Drawing.Point(42, 107);
+            this.lblMaterno.Location = new System.Drawing.Point(10, 88);
             this.lblMaterno.Name = "lblMaterno";
             this.lblMaterno.Size = new System.Drawing.Size(86, 13);
             this.lblMaterno.TabIndex = 17;
@@ -228,7 +248,7 @@
             // 
             // txtPaterno
             // 
-            this.txtPaterno.Location = new System.Drawing.Point(134, 66);
+            this.txtPaterno.Location = new System.Drawing.Point(114, 56);
             this.txtPaterno.Name = "txtPaterno";
             this.txtPaterno.Size = new System.Drawing.Size(194, 20);
             this.txtPaterno.TabIndex = 14;
@@ -236,7 +256,7 @@
             // lblPaterno
             // 
             this.lblPaterno.AutoSize = true;
-            this.lblPaterno.Location = new System.Drawing.Point(44, 73);
+            this.lblPaterno.Location = new System.Drawing.Point(24, 63);
             this.lblPaterno.Name = "lblPaterno";
             this.lblPaterno.Size = new System.Drawing.Size(84, 13);
             this.lblPaterno.TabIndex = 15;
@@ -244,7 +264,7 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(134, 33);
+            this.txtNombres.Location = new System.Drawing.Point(62, 28);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(194, 20);
             this.txtNombres.TabIndex = 12;
@@ -252,7 +272,7 @@
             // lblNombres
             // 
             this.lblNombres.AutoSize = true;
-            this.lblNombres.Location = new System.Drawing.Point(79, 40);
+            this.lblNombres.Location = new System.Drawing.Point(7, 35);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(49, 13);
             this.lblNombres.TabIndex = 13;
@@ -267,26 +287,6 @@
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
-            // lblGenero
-            // 
-            this.lblGenero.AutoSize = true;
-            this.lblGenero.Location = new System.Drawing.Point(79, 299);
-            this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(42, 13);
-            this.lblGenero.TabIndex = 27;
-            this.lblGenero.Text = "Genero";
-            // 
-            // cmbGenero
-            // 
-            this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cmbGenero.Location = new System.Drawing.Point(134, 299);
-            this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(194, 21);
-            this.cmbGenero.TabIndex = 28;
             // 
             // frmCrearCuenta
             // 

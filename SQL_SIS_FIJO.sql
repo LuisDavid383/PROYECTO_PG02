@@ -7,12 +7,18 @@
 --GO
 
 -- TABLA QUE GUARDA TODOS LOS TIPOS DE DOCUMENTOS
--- https://www.normaslegalesonline.pe/imagenes/15/03/2018/1521132017925_R_196_2010_4.pdf
 CREATE TABLE tbTipoDocumento(
 	IDTipoDocumento INT IDENTITY(1,1) PRIMARY KEY,
-	TipoDocumento VARCHAR (150) NOT NULL,
+	TipoDocumento VARCHAR (30) NOT NULL,
 	Estado BIT NOT NULL DEFAULT 1,
 );
+GO
+
+INSERT INTO tbTipoDocumento (TipoDocumento)
+VALUES 
+('DNI'),
+('Carnet de Extranjería'),
+('Pasaporte');
 GO
 
 CREATE TABLE tbPersona(
@@ -20,26 +26,25 @@ CREATE TABLE tbPersona(
 	Nombres VARCHAR (250) NOT NULL,
 	ApellidoPaterno VARCHAR (250) NOT NULL,
 	ApellidoMaterno VARCHAR (250) NOT NULL,
-	IDTipoDocumento INT NOT NULL, --CLAVE FORANEA PARA LA TABLA tbTipoDocumento
-	Documento VARCHAR (50) NOT NULL UNIQUE,
+	IDTipoDocumento INT NOT NULL,
+	Documento VARCHAR (20) NOT NULL UNIQUE,
 	FechaNacimiento DATE NOT NULL,
-	Telefono VARCHAR (9) NULL,
+	Telefono VARCHAR (9),
 	Correo VARCHAR(250) NOT NULL UNIQUE,
 	Genero CHAR(1) CHECK (Genero IN ('M', 'F')),
 
-	--REFERENCIAR LA CLAVE FORANEA CON LA CLAVE PRIMARIA DE LA TABLA tbTipoDocumento
 	FOREIGN KEY (IDTipoDocumento) REFERENCES tbTipoDocumento(IDTipoDocumento)
 );
 GO
 
 CREATE TABLE tbUsuario(
 	IDUsuario INT IDENTITY(1,1) PRIMARY KEY,
-	IDPersona INT NOT NULL, --CLAVE FORANEA PARA LA TABLA tbPersona
+	IDPersona INT NOT NULL,
 	NombreUsuario VARCHAR (50) NOT NULL,
 	Clave VARCHAR (25) NOT NULL,
+	FechaRegistro DATETIME DEFAULT GETDATE(),
 	Estado BIT NOT NULL DEFAULT 1,
 
-	--REFERENCIAR LA CLAVE FORANEA CON LA CLAVE PRIMARIA DE LA TABLA tbUsuario
 	FOREIGN KEY (IDPersona) REFERENCES tbPersona(IDPersona)
 );
 GO
@@ -90,15 +95,6 @@ CREATE TABLE tbInvitacionEquipo(
 	FOREIGN KEY (idUsuarioInvitado) REFERENCES tbUsuario(idUsuario),
 	FOREIGN KEY (idUsuarioEmisor) REFERENCES tbUsuario(idUsuario)
 );
-GO
-
-
--- INSERTAR REGISTROS A LA TABLA tbTipoDocumento
-INSERT INTO tbTipoDocumento (TipoDocumento)
-VALUES 
-('DNI'),
-('Carnet de Extranjería'),
-('Pasaporte');
 GO
 
 

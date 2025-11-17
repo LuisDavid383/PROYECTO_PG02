@@ -20,26 +20,94 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "USUARIO")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "USUARIO";
+                txtUsuario.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "CONTRASEÑA")
+            {
+                txtContraseña.Text = "";
+                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "")
+            {
+                txtContraseña.Text = "CONTRASEÑA";
+                txtContraseña.ForeColor = Color.DimGray;
+                txtContraseña.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void ptbCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ptbMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void mtdMensajeError(string mensaje, Label lblLabel)
+        {
+            lblLabel.Text = "        " + mensaje;
+            lblLabel.Visible = true;
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             //VALORES
-            string correo = txtCorreo.Text;
+            string Usuario = txtUsuario.Text;
             string clave = txtContraseña.Text;
 
             //VERIFICAR QUE NO SE INGRESEN
-            if (string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text))
+            if (txtUsuario.Text == "USUARIO")
             {
-                MessageBox.Show("No puede dejar espacios en blanco");
+                mtdMensajeError("Ingrese el nombre de Usuario", lblErrorUsuario);
                 return;
+            }
+            else
+            {
+                lblErrorUsuario.Visible = false;
+            }
+
+            if (txtContraseña.Text == "CONTRASEÑA")
+            {
+                mtdMensajeError("Ingrese la contraseña", lblErrorContraseña);
+                return;
+            }
+            else
+            {
+                lblErrorContraseña.Visible = false;
             }
 
             try
             {
-                bool ValidarCredencial = ObjCredenciales.mtdCValidarCredencialesCN(correo, clave); //VERIFICAR SI LAS CREDENCIALES SON CORRECTAS
-                var GuardarUsuario = ObjCredenciales.mtdObtenerUsuarioCN(correo, clave); //GUARDAR LA INFORMACION DEL USUARIO PARA EL USO DEL SISTEMA
+                bool ValidarCredencial = ObjCredenciales.mtdCValidarCredencialesCN(Usuario, clave); //VERIFICAR SI LAS CREDENCIALES SON CORRECTAS
+                var GuardarUsuario = ObjCredenciales.mtdObtenerUsuarioCN(Usuario, clave); //GUARDAR LA INFORMACION DEL USUARIO PARA EL USO DEL SISTEMA
 
                 if (ValidarCredencial)
-                {                    
+                {
                     //GUADAR EL USUARIO EN UNA CLASE GLOBAL STATIC
                     clsSesionUsuario_CN.idUsuario = GuardarUsuario.idUsuario;
                     clsSesionUsuario_CN.NombreUsuario = GuardarUsuario.nombreUsuario;
@@ -58,14 +126,15 @@ namespace CapaPresentacion
             }
         }
 
-        private void ptbCerrar_Click(object sender, EventArgs e)
+        private void frmInicio_Load(object sender, EventArgs e)
         {
-            this.Close();
+            lblErrorUsuario.Visible = false;
+            lblErrorContraseña.Visible = false;
         }
 
         private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmCrearCuenta CrearCuenta = new frmCrearCuenta();
+            frmCrearCuen CrearCuenta = new frmCrearCuen();
             CrearCuenta.ShowDialog();
         }
     }
