@@ -143,6 +143,7 @@
             this.btnListarTorneos.Text = "Listar Torneos";
             this.btnListarTorneos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListarTorneos.UseVisualStyleBackColor = true;
+            this.btnListarTorneos.Click += new System.EventHandler(this.btnListarTorneos_Click);
             // 
             // btnCrearTorneo
             // 

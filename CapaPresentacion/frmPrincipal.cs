@@ -80,5 +80,12 @@ namespace CapaPresentacion
             FormularioVista.BringToFront();
             FormularioVista.Show();
         }
+
+        private void btnListarTorneos_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormulario(new frmListarEquipos());
+
+            mtdHideSubMenu();
+        }
     }
 }
