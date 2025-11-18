@@ -49,17 +49,17 @@
     <Compile Include="ControPersonalizados\LineControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="frmCarga.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCarga.Designer.cs">
-      <DependentUpon>frmCarga.cs</DependentUpon>
-    </Compile>
     <Compile Include="Equipo\frmListaInvitadosEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Equipo\frmListaInvitadosEquipo.Designer.cs">
       <DependentUpon>frmListaInvitadosEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\frmCrearCuenta.cs">
       <SubType>Form</SubType>
@@ -93,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmCrearCuenta.resx">
       <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>

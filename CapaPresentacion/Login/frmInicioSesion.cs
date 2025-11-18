@@ -112,8 +112,8 @@ namespace CapaPresentacion
                     clsSesionUsuario_CN.idUsuario = GuardarUsuario.idUsuario;
                     clsSesionUsuario_CN.NombreUsuario = GuardarUsuario.nombreUsuario;
 
-                    frmPaginaPrincipal crearEquipo = new frmPaginaPrincipal();
-                    crearEquipo.ShowDialog();
+                    frmPrincipal MenuPrincipal = new frmPrincipal();
+                    MenuPrincipal.ShowDialog();
                 }
                 else
                 {

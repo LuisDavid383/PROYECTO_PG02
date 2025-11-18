@@ -6,7 +6,6 @@
 --USE PRUEBADEPORTE
 --GO
 
--- TABLA QUE GUARDA TODOS LOS TIPOS DE DOCUMENTOS
 CREATE TABLE tbTipoDocumento(
 	IDTipoDocumento INT IDENTITY(1,1) PRIMARY KEY,
 	TipoDocumento VARCHAR (30) NOT NULL,
@@ -27,7 +26,7 @@ CREATE TABLE tbPersona(
 	ApellidoPaterno VARCHAR (250) NOT NULL,
 	ApellidoMaterno VARCHAR (250) NOT NULL,
 	IDTipoDocumento INT NOT NULL,
-	Documento VARCHAR (20) NOT NULL UNIQUE,
+	Documento VARCHAR (15) NOT NULL UNIQUE,
 	FechaNacimiento DATE NOT NULL,
 	Telefono VARCHAR (9),
 	Correo VARCHAR(250) NOT NULL UNIQUE,
@@ -49,37 +48,34 @@ CREATE TABLE tbUsuario(
 );
 GO
 
-
--- TABLA PARA LA CREACION DE UN EQUIPO
 CREATE TABLE tbEquipo(
 	IDEquipo INT IDENTITY(1,1) PRIMARY KEY,
-	--idTorneo INT NOT NULL,
-	IDCreador INT NOT NULL, -- USUARIO QUE CREA EL EQUIPO / CLAVE FORANEA PARA LA TABLA tbUsuario
+	IDCreador INT NOT NULL,
 	NombreEquipo VARCHAR(150) NOT NULL,
 	Descripcion VARCHAR(250),
 	FechaRegistro DATETIME DEFAULT GETDATE(),
+	FechaModificacion DATETIME,
 	Estado BIT NOT NULL DEFAULT 1,
 
-	--REFERENCIAR LA CLAVE FORANEA CON
 	FOREIGN KEY (IDCreador) REFERENCES tbUsuario(IDUsuario)
 );
 GO 
 
 
--- TABLA QUE MUESTRA LOS INTEGRANTES DEL EQUIPO
-CREATE TABLE tbEquipoIntegrante(
-	IDIntegrante INT IDENTITY(1,1) PRIMARY KEY,
-	IDEquipo INT NOT NULL,
-	IDUsuario INT NOT NULL,
-	Puesto VARCHAR(100),       -- Ej: "Delantero", "Base", "Portero"
-	NumeroCamiseta INT,        -- Ej: 10, 23, etc.
-	EsCapitan BIT DEFAULT 0,   -- El creador podría tener esto en 1
-	FechaUnion DATETIME DEFAULT GETDATE(),
-	Estado BIT DEFAULT 1,      -- 1=Activo, 0=Inactivo o expulsado
-	FOREIGN KEY (IDEquipo) REFERENCES tbEquipo(IDEquipo),
-	FOREIGN KEY (IDUsuario) REFERENCES tbUsuario(IDUsuario)
-);
-GO
+---- TABLA QUE MUESTRA LOS INTEGRANTES DEL EQUIPO
+--CREATE TABLE tbEquipoIntegrante(
+--	IDIntegrante INT IDENTITY(1,1) PRIMARY KEY,
+--	IDEquipo INT NOT NULL,
+--	IDUsuario INT NOT NULL,
+--	Puesto VARCHAR(100),       -- Ej: "Delantero", "Base", "Portero"
+--	NumeroCamiseta INT,        -- Ej: 10, 23, etc.
+--	EsCapitan BIT DEFAULT 0,   -- El creador podría tener esto en 1
+--	FechaUnion DATETIME DEFAULT GETDATE(),
+--	Estado BIT DEFAULT 1,      -- 1=Activo, 0=Inactivo o expulsado
+--	FOREIGN KEY (IDEquipo) REFERENCES tbEquipo(IDEquipo),
+--	FOREIGN KEY (IDUsuario) REFERENCES tbUsuario(IDUsuario)
+--);
+--GO
 
 -- TABLA DE INVITACIONES
 CREATE TABLE tbInvitacionEquipo(
@@ -106,23 +102,23 @@ SELECT * FROM tbInvitacionEquipo
 
 
 
-INSERT INTO tbPersona
-(Nombres, ApellidoPaterno, ApellidoMaterno, IDTipoDocumento, Documento, FechaNacimiento, Telefono, Correo, Genero)
-VALUES
-('Juan Carlos', 'Pérez', 'Gómez', 1, '12345678', '1990-05-12', '987654321', 'juan.perez@example.com', 'M'),
-('María Luisa', 'Ramírez', 'Torres', 2, 'E1234567', '1987-11-23', '912345678', 'maria.ramirez@example.com', 'F'),
-('Luis Alberto', 'Sánchez', 'Flores', 3, 'PA987654', '1995-03-07', NULL, 'luis.sanchez@example.com', 'M');
-GO
+--INSERT INTO tbPersona
+--(Nombres, ApellidoPaterno, ApellidoMaterno, IDTipoDocumento, Documento, FechaNacimiento, Telefono, Correo, Genero)
+--VALUES
+--('Juan Carlos', 'Pérez', 'Gómez', 1, '12345678', '1990-05-12', '987654321', 'juan.perez@example.com', 'M'),
+--('María Luisa', 'Ramírez', 'Torres', 2, 'E1234567', '1987-11-23', '912345678', 'maria.ramirez@example.com', 'F'),
+--('Luis Alberto', 'Sánchez', 'Flores', 3, 'PA987654', '1995-03-07', NULL, 'luis.sanchez@example.com', 'M');
+--GO
 
-INSERT INTO tbUsuario (IDPersona, NombreUsuario, Clave, Estado)
-VALUES
-(1, 'jperez', 'clave123', 1),
-(2, 'mramirez', 'pass456', 1),
-(3, 'lsanchez', 'abc789', 1);
-GO
+--INSERT INTO tbUsuario (IDPersona, NombreUsuario, Clave, Estado)
+--VALUES
+--(1, 'jperez', 'clave123', 1),
+--(2, 'mramirez', 'pass456', 1),
+--(3, 'lsanchez', 'abc789', 1);
+--GO
 
-SELECT IDUsuario, NombreUsuario
-FROM tbUsuario
-WHERE NombreUsuario LIKE 'L%'
-  AND IDUsuario <> 1
-  AND Estado = 1;
+--SELECT IDUsuario, NombreUsuario
+--FROM tbUsuario
+--WHERE NombreUsuario LIKE 'L%'
+--  AND IDUsuario <> 1
+--  AND Estado = 1;
