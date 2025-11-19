@@ -32,6 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,16 +77,42 @@
             this.panel1.Size = new System.Drawing.Size(341, 70);
             this.panel1.TabIndex = 4;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.LightGray;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(396, 135);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(122, 30);
+            this.btnModificar.TabIndex = 65;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.LightGray;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(268, 135);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(122, 30);
+            this.btnEliminar.TabIndex = 66;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
             // usEquipoItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(83)))));
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNombreEquipo);
             this.Controls.Add(this.pictureBox1);
             this.Name = "usEquipoItem";
-            this.Size = new System.Drawing.Size(557, 150);
+            this.Size = new System.Drawing.Size(557, 179);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -98,5 +126,7 @@
         private System.Windows.Forms.Label lblNombreEquipo;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
