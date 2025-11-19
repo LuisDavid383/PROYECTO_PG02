@@ -101,6 +101,7 @@
             this.btnCrearEquipo.Text = "Crear Equipo";
             this.btnCrearEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrearEquipo.UseVisualStyleBackColor = true;
+            this.btnCrearEquipo.Click += new System.EventHandler(this.btnCrearEquipo_Click);
             // 
             // btnEquipo
             // 

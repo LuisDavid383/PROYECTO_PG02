@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace CapaDatos
     {
         private static readonly string connectionString = @"server = David; 
                                                             database= PRUEBADEPORTE; 
-                                                            integrated security = true";
+                                                            integrated security = true"; 
 
         //METODO PARA ENGLOBAR A TODOS LAS CLASES LA CADENA DE CONEXION
         public static SqlConnection mtdObtenerConexion()
