@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlSideMenu = new System.Windows.Forms.Panel();
-            this.pnlEquipe = new System.Windows.Forms.Panel();
+            this.pnlEquipo = new System.Windows.Forms.Panel();
             this.btnListarEquipo = new System.Windows.Forms.Button();
             this.btnCrearEquipo = new System.Windows.Forms.Button();
             this.btnEquipo = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlSideMenu.SuspendLayout();
-            this.pnlEquipe.SuspendLayout();
+            this.pnlEquipo.SuspendLayout();
             this.pnlTorneo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             this.pnlSideMenu.AutoScroll = true;
             this.pnlSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.pnlSideMenu.Controls.Add(this.pnlEquipe);
+            this.pnlSideMenu.Controls.Add(this.pnlEquipo);
             this.pnlSideMenu.Controls.Add(this.btnEquipo);
             this.pnlSideMenu.Controls.Add(this.pnlTorneo);
             this.pnlSideMenu.Controls.Add(this.btnTorneo);
@@ -59,16 +59,16 @@
             this.pnlSideMenu.Size = new System.Drawing.Size(219, 561);
             this.pnlSideMenu.TabIndex = 0;
             // 
-            // pnlEquipe
+            // pnlEquipo
             // 
-            this.pnlEquipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlEquipe.Controls.Add(this.btnListarEquipo);
-            this.pnlEquipe.Controls.Add(this.btnCrearEquipo);
-            this.pnlEquipe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEquipe.Location = new System.Drawing.Point(0, 289);
-            this.pnlEquipe.Name = "pnlEquipe";
-            this.pnlEquipe.Size = new System.Drawing.Size(219, 88);
-            this.pnlEquipe.TabIndex = 1;
+            this.pnlEquipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.pnlEquipo.Controls.Add(this.btnListarEquipo);
+            this.pnlEquipo.Controls.Add(this.btnCrearEquipo);
+            this.pnlEquipo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEquipo.Location = new System.Drawing.Point(0, 289);
+            this.pnlEquipo.Name = "pnlEquipo";
+            this.pnlEquipo.Size = new System.Drawing.Size(219, 88);
+            this.pnlEquipo.TabIndex = 1;
             // 
             // btnListarEquipo
             // 
@@ -85,6 +85,7 @@
             this.btnListarEquipo.Text = "Listar Equipo";
             this.btnListarEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListarEquipo.UseVisualStyleBackColor = true;
+            this.btnListarEquipo.Click += new System.EventHandler(this.btnListarEquipo_Click);
             // 
             // btnCrearEquipo
             // 
@@ -117,6 +118,7 @@
             this.btnEquipo.Text = "Equipo";
             this.btnEquipo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEquipo.UseVisualStyleBackColor = true;
+            this.btnEquipo.Click += new System.EventHandler(this.btnEquipo_Click);
             // 
             // pnlTorneo
             // 
@@ -208,7 +210,7 @@
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.pnlSideMenu.ResumeLayout(false);
-            this.pnlEquipe.ResumeLayout(false);
+            this.pnlEquipo.ResumeLayout(false);
             this.pnlTorneo.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -222,7 +224,7 @@
         private System.Windows.Forms.Panel pnlTorneo;
         private System.Windows.Forms.Button btnCrearTorneo;
         private System.Windows.Forms.Button btnListarTorneos;
-        private System.Windows.Forms.Panel pnlEquipe;
+        private System.Windows.Forms.Panel pnlEquipo;
         private System.Windows.Forms.Button btnListarEquipo;
         private System.Windows.Forms.Button btnCrearEquipo;
         private System.Windows.Forms.Button btnEquipo;
