@@ -50,9 +50,11 @@
             this.gpbUsuarioInvitado.Controls.Add(this.btnBuscar);
             this.gpbUsuarioInvitado.Controls.Add(this.txtNomUsuario);
             this.gpbUsuarioInvitado.Controls.Add(this.lblNomUsuario);
+            this.gpbUsuarioInvitado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbUsuarioInvitado.ForeColor = System.Drawing.Color.DimGray;
             this.gpbUsuarioInvitado.Location = new System.Drawing.Point(28, 86);
             this.gpbUsuarioInvitado.Name = "gpbUsuarioInvitado";
-            this.gpbUsuarioInvitado.Size = new System.Drawing.Size(426, 249);
+            this.gpbUsuarioInvitado.Size = new System.Drawing.Size(426, 260);
             this.gpbUsuarioInvitado.TabIndex = 0;
             this.gpbUsuarioInvitado.TabStop = false;
             this.gpbUsuarioInvitado.Text = "Usuario Invitado";
@@ -71,26 +73,27 @@
             // 
             // txtUsuarioInvitado
             // 
-            this.txtUsuarioInvitado.Location = new System.Drawing.Point(155, 193);
+            this.txtUsuarioInvitado.Location = new System.Drawing.Point(218, 190);
             this.txtUsuarioInvitado.Name = "txtUsuarioInvitado";
             this.txtUsuarioInvitado.ReadOnly = true;
-            this.txtUsuarioInvitado.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuarioInvitado.Size = new System.Drawing.Size(100, 27);
             this.txtUsuarioInvitado.TabIndex = 5;
             // 
             // lblUsuarioInvitado
             // 
             this.lblUsuarioInvitado.AutoSize = true;
+            this.lblUsuarioInvitado.ForeColor = System.Drawing.Color.DimGray;
             this.lblUsuarioInvitado.Location = new System.Drawing.Point(41, 196);
             this.lblUsuarioInvitado.Name = "lblUsuarioInvitado";
-            this.lblUsuarioInvitado.Size = new System.Drawing.Size(92, 13);
+            this.lblUsuarioInvitado.Size = new System.Drawing.Size(150, 21);
             this.lblUsuarioInvitado.TabIndex = 4;
             this.lblUsuarioInvitado.Text = "IDUsuarioInvitado";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(180, 70);
+            this.btnBuscar.Location = new System.Drawing.Point(231, 63);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 30);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -98,17 +101,18 @@
             // 
             // txtNomUsuario
             // 
-            this.txtNomUsuario.Location = new System.Drawing.Point(155, 33);
+            this.txtNomUsuario.Location = new System.Drawing.Point(218, 30);
             this.txtNomUsuario.Name = "txtNomUsuario";
-            this.txtNomUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtNomUsuario.Size = new System.Drawing.Size(100, 27);
             this.txtNomUsuario.TabIndex = 1;
             // 
             // lblNomUsuario
             // 
             this.lblNomUsuario.AutoSize = true;
+            this.lblNomUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.lblNomUsuario.Location = new System.Drawing.Point(41, 36);
             this.lblNomUsuario.Name = "lblNomUsuario";
-            this.lblNomUsuario.Size = new System.Drawing.Size(98, 13);
+            this.lblNomUsuario.Size = new System.Drawing.Size(158, 21);
             this.lblNomUsuario.TabIndex = 0;
             this.lblNomUsuario.Text = "Nombre de Usuario";
             // 
@@ -122,15 +126,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(69, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.Size = new System.Drawing.Size(93, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "ID EQUIPO";
             // 
             // btnInvitar
             // 
-            this.btnInvitar.Location = new System.Drawing.Point(353, 342);
+            this.btnInvitar.Location = new System.Drawing.Point(346, 364);
             this.btnInvitar.Name = "btnInvitar";
             this.btnInvitar.Size = new System.Drawing.Size(75, 23);
             this.btnInvitar.TabIndex = 4;
@@ -142,6 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(480, 413);
             this.Controls.Add(this.btnInvitar);
             this.Controls.Add(this.txtEquipo);

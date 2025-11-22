@@ -56,14 +56,14 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.lblErrorDocCombox = new System.Windows.Forms.Label();
-            this.lineControl8 = new LineControl();
-            this.lineControl7 = new LineControl();
-            this.lineControl6 = new LineControl();
-            this.lineControl5 = new LineControl();
-            this.lineControl4 = new LineControl();
-            this.lineControl3 = new LineControl();
-            this.lineControl2 = new LineControl();
-            this.lineControl1 = new LineControl();
+            this.lineControl9 = new LineControl();
+            this.lineControl10 = new LineControl();
+            this.lineControl11 = new LineControl();
+            this.lineControl12 = new LineControl();
+            this.lineControl13 = new LineControl();
+            this.lineControl14 = new LineControl();
+            this.lineControl15 = new LineControl();
+            this.lineControl16 = new LineControl();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,7 +72,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(63, 601);
+            this.panel1.Size = new System.Drawing.Size(63, 762);
             this.panel1.TabIndex = 0;
             // 
             // lblTitulo
@@ -385,7 +385,7 @@
             this.lblErrorContraseña.ForeColor = System.Drawing.Color.LightCoral;
             this.lblErrorContraseña.Image = global::CapaPresentacion.Properties.Resources.imgWarningRed20x20;
             this.lblErrorContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblErrorContraseña.Location = new System.Drawing.Point(100, 524);
+            this.lblErrorContraseña.Location = new System.Drawing.Point(100, 543);
             this.lblErrorContraseña.Name = "lblErrorContraseña";
             this.lblErrorContraseña.Size = new System.Drawing.Size(96, 16);
             this.lblErrorContraseña.TabIndex = 46;
@@ -397,7 +397,7 @@
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContraseña.Location = new System.Drawing.Point(103, 492);
+            this.txtContraseña.Location = new System.Drawing.Point(103, 503);
             this.txtContraseña.MaxLength = 50;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(372, 20);
@@ -414,7 +414,7 @@
             this.btnCrearCuenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCrearCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearCuenta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCuenta.Location = new System.Drawing.Point(99, 549);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(99, 596);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(372, 40);
             this.btnCrearCuenta.TabIndex = 47;
@@ -435,91 +435,97 @@
             this.lblErrorDocCombox.TabIndex = 48;
             this.lblErrorDocCombox.Text = "Mensaje de Error";
             // 
-            // lineControl8
+            // lineControl9
             // 
-            this.lineControl8.LineColor = System.Drawing.Color.White;
-            this.lineControl8.Location = new System.Drawing.Point(103, 515);
-            this.lineControl8.Name = "lineControl8";
-            this.lineControl8.Size = new System.Drawing.Size(372, 10);
-            this.lineControl8.TabIndex = 45;
-            this.lineControl8.Text = "lineControl8";
+            this.lineControl9.LineColor = System.Drawing.Color.White;
+            this.lineControl9.Location = new System.Drawing.Point(103, 70);
+            this.lineControl9.Name = "lineControl9";
+            this.lineControl9.Size = new System.Drawing.Size(185, 10);
+            this.lineControl9.TabIndex = 49;
+            this.lineControl9.Text = "lineControl9";
             // 
-            // lineControl7
+            // lineControl10
             // 
-            this.lineControl7.LineColor = System.Drawing.Color.White;
-            this.lineControl7.Location = new System.Drawing.Point(103, 452);
-            this.lineControl7.Name = "lineControl7";
-            this.lineControl7.Size = new System.Drawing.Size(372, 10);
-            this.lineControl7.TabIndex = 42;
-            this.lineControl7.Text = "lineControl7";
+            this.lineControl10.LineColor = System.Drawing.Color.White;
+            this.lineControl10.Location = new System.Drawing.Point(103, 130);
+            this.lineControl10.Name = "lineControl10";
+            this.lineControl10.Size = new System.Drawing.Size(185, 10);
+            this.lineControl10.TabIndex = 50;
+            this.lineControl10.Text = "lineControl10";
             // 
-            // lineControl6
+            // lineControl11
             // 
-            this.lineControl6.LineColor = System.Drawing.Color.White;
-            this.lineControl6.Location = new System.Drawing.Point(303, 307);
-            this.lineControl6.Name = "lineControl6";
-            this.lineControl6.Size = new System.Drawing.Size(179, 10);
-            this.lineControl6.TabIndex = 29;
-            this.lineControl6.Text = "lineControl6";
+            this.lineControl11.LineColor = System.Drawing.Color.White;
+            this.lineControl11.Location = new System.Drawing.Point(103, 187);
+            this.lineControl11.Name = "lineControl11";
+            this.lineControl11.Size = new System.Drawing.Size(185, 10);
+            this.lineControl11.TabIndex = 51;
+            this.lineControl11.Text = "lineControl11";
             // 
-            // lineControl5
+            // lineControl12
             // 
-            this.lineControl5.LineColor = System.Drawing.Color.White;
-            this.lineControl5.Location = new System.Drawing.Point(304, 252);
-            this.lineControl5.Name = "lineControl5";
-            this.lineControl5.Size = new System.Drawing.Size(175, 10);
-            this.lineControl5.TabIndex = 12;
-            this.lineControl5.Text = "lineControl5";
+            this.lineControl12.LineColor = System.Drawing.Color.White;
+            this.lineControl12.Location = new System.Drawing.Point(304, 187);
+            this.lineControl12.Name = "lineControl12";
+            this.lineControl12.Size = new System.Drawing.Size(185, 10);
+            this.lineControl12.TabIndex = 52;
+            this.lineControl12.Text = "lineControl12";
             // 
-            // lineControl4
+            // lineControl13
             // 
-            this.lineControl4.LineColor = System.Drawing.Color.White;
-            this.lineControl4.Location = new System.Drawing.Point(304, 191);
-            this.lineControl4.Name = "lineControl4";
-            this.lineControl4.Size = new System.Drawing.Size(175, 10);
-            this.lineControl4.TabIndex = 10;
-            this.lineControl4.Text = "lineControl4";
+            this.lineControl13.LineColor = System.Drawing.Color.White;
+            this.lineControl13.Location = new System.Drawing.Point(304, 249);
+            this.lineControl13.Name = "lineControl13";
+            this.lineControl13.Size = new System.Drawing.Size(185, 10);
+            this.lineControl13.TabIndex = 53;
+            this.lineControl13.Text = "lineControl13";
             // 
-            // lineControl3
+            // lineControl14
             // 
-            this.lineControl3.LineColor = System.Drawing.Color.White;
-            this.lineControl3.Location = new System.Drawing.Point(103, 191);
-            this.lineControl3.Name = "lineControl3";
-            this.lineControl3.Size = new System.Drawing.Size(175, 10);
-            this.lineControl3.TabIndex = 8;
-            this.lineControl3.Text = "lineControl3";
+            this.lineControl14.LineColor = System.Drawing.Color.White;
+            this.lineControl14.Location = new System.Drawing.Point(304, 305);
+            this.lineControl14.Name = "lineControl14";
+            this.lineControl14.Size = new System.Drawing.Size(185, 10);
+            this.lineControl14.TabIndex = 54;
+            this.lineControl14.Text = "lineControl14";
             // 
-            // lineControl2
+            // lineControl15
             // 
-            this.lineControl2.LineColor = System.Drawing.Color.White;
-            this.lineControl2.Location = new System.Drawing.Point(103, 134);
-            this.lineControl2.Name = "lineControl2";
-            this.lineControl2.Size = new System.Drawing.Size(372, 10);
-            this.lineControl2.TabIndex = 6;
-            this.lineControl2.Text = "lineControl2";
+            this.lineControl15.LineColor = System.Drawing.Color.White;
+            this.lineControl15.Location = new System.Drawing.Point(103, 448);
+            this.lineControl15.Name = "lineControl15";
+            this.lineControl15.Size = new System.Drawing.Size(185, 10);
+            this.lineControl15.TabIndex = 55;
+            this.lineControl15.Text = "lineControl15";
             // 
-            // lineControl1
+            // lineControl16
             // 
-            this.lineControl1.LineColor = System.Drawing.Color.White;
-            this.lineControl1.Location = new System.Drawing.Point(103, 74);
-            this.lineControl1.Name = "lineControl1";
-            this.lineControl1.Size = new System.Drawing.Size(372, 10);
-            this.lineControl1.TabIndex = 4;
-            this.lineControl1.Text = "lineControl1";
+            this.lineControl16.LineColor = System.Drawing.Color.White;
+            this.lineControl16.Location = new System.Drawing.Point(103, 529);
+            this.lineControl16.Name = "lineControl16";
+            this.lineControl16.Size = new System.Drawing.Size(185, 10);
+            this.lineControl16.TabIndex = 56;
+            this.lineControl16.Text = "lineControl16";
             // 
-            // frmCrearCuen
+            // frmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(510, 601);
+            this.ClientSize = new System.Drawing.Size(632, 762);
+            this.Controls.Add(this.lineControl16);
+            this.Controls.Add(this.lineControl15);
+            this.Controls.Add(this.lineControl14);
+            this.Controls.Add(this.lineControl13);
+            this.Controls.Add(this.lineControl12);
+            this.Controls.Add(this.lineControl11);
+            this.Controls.Add(this.lineControl10);
+            this.Controls.Add(this.lineControl9);
             this.Controls.Add(this.lblErrorDocCombox);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.lblErrorContraseña);
-            this.Controls.Add(this.lineControl8);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.lblErrorNomUsuario);
-            this.Controls.Add(this.lineControl7);
             this.Controls.Add(this.txtNomUsuario);
             this.Controls.Add(this.lblErrorGenero);
             this.Controls.Add(this.lblErrorFechaNacimiento);
@@ -532,25 +538,19 @@
             this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblOpcional);
-            this.Controls.Add(this.lineControl6);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbTipoDocumento);
-            this.Controls.Add(this.lineControl5);
             this.Controls.Add(this.txtDocumento);
-            this.Controls.Add(this.lineControl4);
             this.Controls.Add(this.txtApellidoMaterno);
-            this.Controls.Add(this.lineControl3);
             this.Controls.Add(this.txtApellidoPaterno);
-            this.Controls.Add(this.lineControl2);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lineControl1);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmCrearCuen";
+            this.Name = "frmCrearCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCrearCuen";
             this.Load += new System.EventHandler(this.frmCrearCuen_Load);
@@ -597,5 +597,13 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.Label lblErrorDocCombox;
+        private LineControl lineControl9;
+        private LineControl lineControl10;
+        private LineControl lineControl11;
+        private LineControl lineControl12;
+        private LineControl lineControl13;
+        private LineControl lineControl14;
+        private LineControl lineControl15;
+        private LineControl lineControl16;
     }
 }

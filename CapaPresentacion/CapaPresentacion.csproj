@@ -55,6 +55,18 @@
     <Compile Include="Equipo\frmListaInvitadosEquipo.Designer.cs">
       <DependentUpon>frmListaInvitadosEquipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearTorneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearTorneo.Designer.cs">
+      <DependentUpon>frmCrearTorneo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnfrentamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnfrentamientos.Designer.cs">
+      <DependentUpon>frmEnfrentamientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListarEquipos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,12 @@
     <Compile Include="usEquipoItem.Designer.cs">
       <DependentUpon>usEquipoItem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCrearTorneo.resx">
+      <DependentUpon>frmCrearTorneo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnfrentamientos.resx">
+      <DependentUpon>frmEnfrentamientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListarEquipos.resx">
       <DependentUpon>frmListarEquipos.cs</DependentUpon>
     </EmbeddedResource>

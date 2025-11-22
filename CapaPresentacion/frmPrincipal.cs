@@ -20,15 +20,15 @@ namespace CapaPresentacion
 
         private void mtdCustomDeding()
         {
-            pnlEquipe.Visible = false;
+            pnlEquipo.Visible = false;
             pnlTorneo.Visible = false;
         }
 
         private void mtdHideSubMenu()
         {
-            if (pnlEquipe.Visible == true)
+            if (pnlEquipo.Visible == true)
             {
-                pnlEquipe.Visible = false;
+                pnlEquipo.Visible = false;
             }
 
             if (pnlTorneo.Visible == true)
@@ -57,7 +57,9 @@ namespace CapaPresentacion
 
         private void btnCrearTorneo_Click(object sender, EventArgs e)
         {
-            mtdAbrirFormulario(new frmCrearEquipo());
+            //frmCrearTorneo frm = new frmCrearTorneo();
+            //frm.ShowDialog();
+            mtdAbrirFormulario(new frmCrearTorneo());
 
             mtdHideSubMenu();
         }
@@ -83,9 +85,28 @@ namespace CapaPresentacion
 
         private void btnListarTorneos_Click(object sender, EventArgs e)
         {
-            mtdAbrirFormulario(new frmListarEquipos());
+            //mtdAbrirFormulario(new frmListarTorneo());
+
+            //mtdHideSubMenu();
+        }
+
+        private void btnCrearEquipo_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormulario(new frmCrearEquipo());
 
             mtdHideSubMenu();
+        }
+
+        private void btnListarEquipo_Click(object sender, EventArgs e)
+        {
+            mtdAbrirFormulario(new frmPaginaPrincipal());
+
+            mtdHideSubMenu();
+        }
+
+        private void btnEquipo_Click(object sender, EventArgs e)
+        {
+            mtdShowSubMenu(pnlEquipo);
         }
     }
 }
